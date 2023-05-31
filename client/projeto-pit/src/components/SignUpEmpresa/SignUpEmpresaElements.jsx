@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
+import backgroundImage from '../../assets/wave.png'; // Importe sua imagem de background
 
 export const Container = styled.div`
   min-height: 692px;
@@ -13,20 +13,26 @@ export const Container = styled.div`
   z-index: 0;
   overflow: hidden;
   overflow-y: auto; /* Adiciona scroll vertical apenas quando necessário */
-  background: linear-gradient(45deg, #ff3933 0%, #ff4838 50%,  #ff884a 100%);
+  background: url(${backgroundImage});
+  background-size: cover; // Adicionado para cobrir todo o espaço
 `
 
 export const LoginBox = styled.div`
-margin-top: 40px;
+  margin-top: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: linear-gradient(45deg, #000 0%, #000 25%, #000 50%,  #000 100%);
+  background: linear-gradient(45deg, #000 0%, #000 25%, #000 50%, #000 100%);
   border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
+
 
 export const LoginBoxH2 = styled.h2`
   margin: 0 0 30px;
@@ -70,14 +76,14 @@ export const UserBoxLabel = styled.label`
 `;
 
 export const ButtonForm = styled.div`
-  display: flex;
+    display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 5px;
 `;
 
 export const ButtonFormA = styled(Link)`
-  padding: 10px 100px;
+  padding: 8px 80px;
   color: #fff;
   font-size: 16px;
   text-decoration: none;
@@ -94,6 +100,10 @@ export const ButtonFormA = styled(Link)`
     border-radius: 5px;
     box-shadow: 0 0 5px #fff;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 8px 60px;
+  }
 `;
 
 export const Register = styled.div`
@@ -109,5 +119,4 @@ export const Register = styled.div`
 export const A = styled(Link)`
 margin: auto;
 color: #fff;
-text-decoration-line: underline;
 `;

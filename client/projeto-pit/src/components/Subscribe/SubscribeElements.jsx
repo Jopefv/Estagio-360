@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
+import backgroundImage from '../../assets/wave.png'; // Importe sua imagem de background
+
 
 export const PricingSection = styled.div`
-  height: 100vh; /* Alterado de 100% para 100vh */
+      min-height: 100vh; // Alterado de height para min-height
   width: 100%;
   padding: 100px 0 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Adicionado alinhamento central */
-  background: linear-gradient(45deg, #ff3933 0%, #ff4838 50%, #ff884a 100%);
+  align-items: center;
+  background: url(${backgroundImage});
+  background-size: cover; // Adicionado para cobrir todo o espaço
 `;
 
 export const PricingContainer = styled.div`
@@ -24,7 +27,7 @@ export const PricingContainer = styled.div`
 `;
 
 export const PricingContainerCard = styled.a`
-  background: linear-gradient(45deg, #000 0%, #000 25%, #ff4838 50%, #ff884a 100%);
+  background: linear-gradient(45deg, #000 0%, #000 25%, #000 50%, #000 100%);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
   width: 280px;
   height: 500px;
