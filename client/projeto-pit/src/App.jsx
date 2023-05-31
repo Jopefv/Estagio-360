@@ -9,6 +9,7 @@ import SignupPage from './pages/signup'
 import SignUpClientePage from './pages/signupcliente'
 import SignUpEmpresaPage from './pages/signupempresa'
 import PerfilUserPage from './pages/perfiluser'
+import PerfilCompanyPage from './pages/perfilcompany'
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast'
 import { UserContextProvider } from '../../context/userContext'
@@ -36,6 +37,7 @@ function App() {
       <Route path='/signupcliente' element={<SignUpClientePage/>} exact/>
       <Route path='/signupempresa' element={<SignUpEmpresaPage/>} exact/>
       <Route path='/perfiluser' element={<PerfilUserPage/>} exact/>
+      <Route path='/perfilcompany' element={<PerfilCompanyPage/>} exact/>
      </Routes>
      </UserContextProvider>
      </CompanyContextProvider>

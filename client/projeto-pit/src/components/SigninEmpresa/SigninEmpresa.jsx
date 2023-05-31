@@ -40,7 +40,7 @@ export default function LoginCompany(){
           }else{
             setData({})
             toast.success('Login realized with success. Welcome!')
-            navigate('/perfiluser')
+            navigate('/perfilcompany')
           }
         } catch (error) {
           

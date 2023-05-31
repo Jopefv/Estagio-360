@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import backgroundImage from '../../assets/wave.png'; // Importe sua imagem de background
+
 
 export const Container = styled.div`
   min-height: 692px;
@@ -10,7 +12,8 @@ export const Container = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(45deg, #ff3933 0%, #ff4838 50%,  #ff884a 100%);
+  background: url(${backgroundImage});
+  background-size: cover; // Adicionado para cobrir todo o espaço
 `
 export const FormWrap = styled.div`
   height: 100%;

@@ -19,6 +19,6 @@ router.post('/signupempresa', companyUser)
 router.post('/signincliente' , loginUser)
 router.post('/signinempresa', loginCompany)
 router.post('/perfiluser', getUserProfile)
-router.post('/perfiluser', getCompanyProfile)
+router.post('/perfilcompany', getCompanyProfile)
 
 module.exports = router
